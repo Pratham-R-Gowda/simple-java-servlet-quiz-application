@@ -1,0 +1,67 @@
+import java.io.IOException;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
+/**
+ * Servlet implementation class SubmitQuiz
+ */
+@WebServlet("/SubmitQuiz")
+public class SubmitQuiz extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public SubmitQuiz() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		 response.setContentType("text/html");
+	        PrintWriter out = response.getWriter();
+
+	        String q1 = request.getParameter("q1");
+	        String q2 = request.getParameter("q2");
+	        String q3 = request.getParameter("q3");
+	        String q4 = request.getParameter("q4");
+	        String q5 = request.getParameter("q5");
+
+	        int score = 0;
+
+	        if ("Scriptlet tag".equals(q1)) {
+	            score++;
+	        }
+	        if ("Both JSP and HTML tags".equals(q2)) {
+	            score++;
+	        }
+	        if ("Driver".equals(q3)) {
+	            score++;
+	        }
+	        if ("Thirty Two".equals(q4)) {
+	            score++;
+	        }
+	        if ("Syntax".equals(q5)) {
+	            score++;
+	        }
+
+	        out.println("<html><body>");
+	        out.println("<h1>Quiz Results</h1>");
+	        out.println("<p>Your score: " + score + "/5</p>");
+	        out.println("</body></html>");
+	    }
+}
