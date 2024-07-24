@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <h1>Online Quiz</h1>
+    <form action='SubmitQuiz' method='post'>
+        <p>1. Which tag is used to execute Java source code in JSP?</p>
+        <input type='radio' name='q1' value='Expression tag'> Expression tag<br>
+        <input type='radio' name='q1' value='Scriptlet tag'> Scriptlet tag<br>
+        <input type='radio' name='q1' value='Declaration tag'> Declaration tag<br>
+
+        <p>2. Which of the following tags does the JSP page contain?</p>
+        <input type='radio' name='q2' value='JSP tags'> JSP tags<br>
+        <input type='radio' name='q2' value='HTML tags'> HTML tags<br>
+        <input type='radio' name='q2' value='Both JSP and HTML tags'> Both JSP and HTML tags<br>
+
+        <p>3.  Which is responsible for getting a connection to database?</p>
+        <input type='radio' name='q3' value='Driver'> Driver<br>
+        <input type='radio' name='q3' value='Connection'> Connection<br>
+        <input type='radio' name='q3' value='Statement'> Statement<br>
+        
+        <p>4. What is the total number of bits in a single IP address?</p>
+        <input type='radio' name='q4' value='Four'> Four<br>
+        <input type='radio' name='q4' value='Thirty Two'> Thirty Two<br>
+        <input type='radio' name='q4' value='Eight'> Eight<br>
+        
+        <p>5. What is the difference between servlet and JSP?</p>
+        <input type='radio' name='q5' value='Compilation'> Compilation<br>
+        <input type='radio' name='q5' value='Translation'> Translation<br>
+        <input type='radio' name='q5' value='Syntax'> Syntax<br>
+        
+
+        <br><input type='submit' value='Submit'>
+    </form>
+</body>
+</html>
